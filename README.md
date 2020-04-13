@@ -1,16 +1,31 @@
-# my_location
+# Location Detector
 
-A new Flutter project.
+Location Detection in Flutter
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### pupspec.yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  geolocator: ^5.1.3
 
-A few resources to get you started if this is your first Flutter project:
+### Add the following to your "gradle.properties" file:
+android.useAndroidX=true
+android.enableJetifier=true
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Make sure you set the compileSdkVersion in your "android/app/build.gradle" file to 28
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### For android, head on over to your AndroidManifest.xml and add either of these permissions:
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+### Starting with iOS and the Info.plist, add the following key/value pairs and customize them to your liking:
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs access to location when open.</string>
+
+<key>NSLocationAlwaysUsageDescription</key>
+<string>This app needs access to location when in the background.</string>
+
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>This app needs access to location when open and in the background.</string>
