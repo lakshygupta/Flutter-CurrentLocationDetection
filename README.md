@@ -2,25 +2,25 @@
 
 Location Detection in Flutter
 
-## Getting Started
+## Adding the Geolocator plugin
 
-### pupspec.yaml
+### 1. pubspec.yaml
 dependencies:
   flutter:
     sdk: flutter
   geolocator: ^5.1.3
 
-### Add the following to your "gradle.properties" file:
+### 2. Add the following to your "gradle.properties" file:
 android.useAndroidX=true
 android.enableJetifier=true
 
-### Make sure you set the compileSdkVersion in your "android/app/build.gradle" file to 28
+### 3. Make sure you set the compileSdkVersion in your "android/app/build.gradle" file to 28
 
-### For android, head on over to your AndroidManifest.xml and add either of these permissions:
+### 4. For android, head on over to your AndroidManifest.xml and add either of these permissions:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-### Starting with iOS and the Info.plist, add the following key/value pairs and customize them to your liking:
+### 5. Starting with iOS and the Info.plist, add the following key/value pairs and customize them to your liking:
 <key>NSLocationWhenInUseUsageDescription</key>
 <string>This app needs access to location when open.</string>
 
